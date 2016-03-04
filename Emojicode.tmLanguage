@@ -41,6 +41,13 @@
                 </dict>
             </array>
         </dict>
+        <dict>
+            <key>match</key>
+            <string>🔟.</string>
+            <key>name</key>
+            <string>string.char.emojic</string>
+        </dict>
+
     </array>
 
     <key>repository</key>
