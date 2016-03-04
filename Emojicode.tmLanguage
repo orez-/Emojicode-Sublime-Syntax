@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>fileTypes</key>
+    <array>
+        <string>emojic</string>
+    </array>
+
+    <key>name</key>
+    <string>Emojicode</string>
+
+    <key>patterns</key>
+    <array>
+        <dict>
+            <key>match</key>
+            <string>👴.*</string>
+            <key>name</key>
+            <string>comment.emojic</string>
+        </dict>
+        <dict>
+            <key>begin</key>
+            <string>👵</string>
+            <key>end</key>
+            <string>👵</string>
+            <key>name</key>
+            <string>comment.block.emojic</string>
+        </dict>
+        <dict>
+            <key>begin</key>
+            <string>🔤</string>
+            <key>end</key>
+            <string>🔤</string>
+            <key>name</key>
+            <string>string.emojic</string>
+            <key>patterns</key>
+            <array>
+                <dict>
+                    <key>include</key>
+                    <string>#escaped-char</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+
+    <key>repository</key>
+    <dict>
+        <key>escaped-char</key>
+        <dict>
+            <key>match</key>
+            <string>❌.</string>
+            <key>name</key>
+            <string>string.emojic</string>
+        </dict>
+    </dict>
+
+    <key>scopeName</key>
+    <string>source.emojic</string>
+
+    <key>uuid</key>
+    <string>ebd40e6a-9f8b-467b-bf82-5c169e4912de</string>
+</dict>
+</plist>
