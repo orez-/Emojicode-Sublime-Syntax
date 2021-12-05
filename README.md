@@ -1,9 +1,20 @@
 # Emojicode Sublime Syntax
-:older_man: Syntax files for the [Emojicode language](http://www.emojicode.org/).
+:grapes: Syntax files for the [Emojicode language](http://www.emojicode.org/).
 # 
-![emojicode_syntax](https://cloud.githubusercontent.com/assets/1037028/13515950/a2ff4bfc-e183-11e5-863e-c97c28636d87.png)
-## Comments
-Both 👴 (line) and 👵 (block) -style comments are highlighted, and are supported by sublime's "Toggle Comment" command.
+![emojicode_syntax](demo.png)
 
-## Strings
-String literals (delimited by 🔤s) are highlighted, and appropriately ignore escaped delimiters, ie ❌🔤.
+## Installation
+Copy the `Emojicode` directory into the Sublime Text packages directory.
+You can navigate to this directory directly via Sublime's Browse Packages command from the command palette.
+
+## Features
+
+### Comments
+Both `💭 line` and `💭🔜 block 🔚💭` -style comments are highlighted, and are supported by Sublime's "Toggle Comment" command.
+
+### Strings
+String literals (delimited by `🔤`s) are highlighted, and appropriately ignore escaped delimiters, ie `❌🔤`.
+Highlighting for string literal interpolation `🧲like_so🧲` is also supported.
+
+### Indentation
+Lines following a block opening `🍇` will be indented, and appropriately dedented at the end of the block `🍉`.

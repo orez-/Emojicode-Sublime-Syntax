@@ -1,0 +1,37 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/syntax.html
+name: Emojicode
+file_extensions:
+  - emojic
+  - 🍇
+scope: source.emojic
+contexts:
+  main:
+    - match: 💭🔜
+      push:
+        - meta_scope: comment.block.emojic
+        - match: 🔚💭
+          pop: true
+    - match: 💭.*
+      scope: comment.emojic
+    - match: 🔤
+      push:
+        - meta_scope: string.emojic
+        - match: 🔤
+          pop: true
+        - include: escaped-char
+        - include: interpolation
+    - match: 🔟.
+      scope: string.char.emojic
+  escaped-char:
+    - match: ❌.
+      scope: string.emojic
+  interpolation:
+    - match: 🧲
+      push:
+        - meta_scope: meta.interpolation
+        - clear_scopes: true
+        - match: 🧲
+          pop: true
+      scope: string.emojic
